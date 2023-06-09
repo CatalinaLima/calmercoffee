@@ -4,7 +4,7 @@ const products = [
     name: "El Gran Gatsby",
     price: 15.99,
     category: "Ficción",
-    img: "greatgatsby.jpg",
+    img: "gg.png",
     stock: 10,
     description: "Una novela clásica que retrata la decadencia de la sociedad en la década de 1920."
     },
@@ -13,7 +13,7 @@ const products = [
     name: "Cien años de soledad",
     price: 12.99,
     category: "Ficción",
-    img: "100.jpg",
+    img: "100.png",
     stock: 5,
     description: "Una obra maestra del realismo mágico que narra la historia de la familia Buendía a lo largo de varias generaciones."
     },
@@ -22,7 +22,7 @@ const products = [
     name: "El principito",
     price: 9.99,
     category: "Infantil",
-    img: "principito.jpg",
+    img: "p.png",
     stock: 8,
     description: "Un cuento filosófico que cautiva tanto a niños como a adultos con su mensaje sobre la importancia de la amistad y el amor."
     },
@@ -40,11 +40,12 @@ const products = [
     name: "Orgullo y prejuicio",
     price: 8.99,
     category: "Ficción",
-    img: "oyp.jpeg",
+    img: "oyp png.png",
     stock: 12,
     description: "Una historia de amor y desafíos sociales en la Inglaterra del siglo XIX, escrita por Jane Austen."
     }
 ];
+
 
 export const getProducts = () => {
     return new Promise ((resolve) => {
@@ -58,7 +59,7 @@ export const getProducts = () => {
 export const getProductById = (productId) => {
     return new Promise ((resolve) => {
         setTimeout(() => {
-            resolve (products.find(prod => prod.id === productId ))
+            resolve (products.find(prod => prod.id === parseInt(productId) ))
         }, 500);
     })
 }
@@ -68,8 +69,6 @@ export const getProductsByCategory = (productCategory) => {
         setTimeout(() => {
             resolve (products.find(prod => prod.category === productCategory ))
         }, 500);
-    })
+    })
 }
-
-
 
