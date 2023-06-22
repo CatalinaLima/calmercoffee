@@ -1,4 +1,7 @@
 .ListGroup{
     background-color: rgb(133, 148, 148);
-    margin-top: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
 }
+

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
     const { cart, clearCart, totalQuantity, total, removeItem} = useContext (CartContext)
-
+    console.log(cart)
 
     const handleCancel = (itemId) => {
         removeItem(itemId, 1); 

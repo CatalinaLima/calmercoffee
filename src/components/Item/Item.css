@@ -11,40 +11,37 @@ a{
     color: green;
   }
   
-  .item-card{
-    color: black;
+  .CardItem{
+    color: rgb(255, 255, 255);
     text-align: center;
     position: relative;
     margin: 10px 15px;
     padding-bottom: 25px;
-    width: 320px;
     border-radius: 4px;
     box-shadow: 0px 0px 3px rgba(0,0,0,0.22);
-    background-color: #fff;
+    background-color: none;
     overflow: hidden;  
     transition: all 0.20s ease-in;
     cursor: pointer;
   }
   
-  .item-card_header{
-    background-color: rgb(233, 233, 233);
+  .Header{
+    background-color: rgb(16, 34, 21);
     font-size: large;
     padding-bottom: 12px;
+    margin: 20px;
+    border-radius: 10px;
   }
   
-  .item-card_header h2{
-    padding: 16px 2px 0px;
-    margin: 0px;
+  .ItemHeader{
+    color: rgb(230, 230, 230);
+    text-align: center;
   }
   
-  .item-card_header small{
-    font-size: 12px;
+  .Info{
+    font-size: 20px;
   }
-  
-  .item-card_img{
-    width: 320px;
-    height: 260px;
-  }
+
   .item-card_img img{
     max-width: 100%;
     max-height: 100%;
@@ -56,8 +53,16 @@ a{
     transform: translateY(-6px);
   }
   
-  .item-card_detail{
-    padding: 12px 8px;
+  .ItemFooter{
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    margin: 50px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.22);
+    background-color:darkgray;
+    overflow: hidden;  
+    transition: all 0.20s ease-in;
+    cursor: pointer;
   }
   
   .item-card_price-tag{
