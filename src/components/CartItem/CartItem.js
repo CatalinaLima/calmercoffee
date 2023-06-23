@@ -1,9 +1,11 @@
 import React from 'react';
 
-const CartItem = ({ p, onCancel, total,onRemove }) => {
+const CartItem = ({ p, onCancel, total }) => {
     const handleCancel = () => {
         onCancel ();
     }
+
+    const itemTotal = p.price * p.quantity;
 
     return (
     <div className="CartItem">
@@ -11,7 +13,7 @@ const CartItem = ({ p, onCancel, total,onRemove }) => {
         <img src={p.img}></img>
         <p>Cantidad: {p.quantity}</p>
         <p>Precio por unidad: ${p.price}</p>
-        <p>Subtotal: ${total}</p>
+        <p>Total: ${itemTotal}</p>
         <button onClick={handleCancel}>Cancelar</button>
     </div>
     );

@@ -77,8 +77,12 @@ const Checkout = () => {
     }
 
     if (orderId) {
-        return <h1 style={{marginTop: 90}}>El id de su orden es: {orderId} </h1>
-    }
+        return (
+            <div>
+            <h1 style={{marginTop: 200}}>Muchas gracias por su compra!</h1>
+            <h1 style={{marginTop: 90}}>El id de su orden es: {orderId} </h1>
+        </div>
+        ) }
 
     return (
         <div>
