@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
     const { cart, clearCart, totalQuantity, total, removeItem} = useContext (CartContext)
-    console.log(cart)
 
     const handleCancel = (itemId) => {
         removeItem(itemId, 1); 
@@ -23,7 +22,7 @@ const Cart = () => {
 
     return(
         <div>
-            {cart.map (p => <CartItem key= {p.id} {...p} onCancel= { () => handleCancel(p.id) } /> ) }
+            {cart.map (p => <CartItem key= {p.id} p={p} total={total} onCancel= { () => handleCancel(p.id) } /> ) }
             <h3>Total: $ {total} </h3>
             <button onClick = { () => clearCart ()} className='Button'>Limpiar carrito</button>
             <Link to = '/checkout' className='Option'> Checkout </Link>
@@ -31,4 +30,5 @@ const Cart = () => {
     )
 } 
 
-export default Cart;
+export default Cart;
+

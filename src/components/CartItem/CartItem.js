@@ -1,21 +1,21 @@
 import React from 'react';
 
-const CartItem = ({ name, quantity, price, total, onCancel, onRemove }) => {
+const CartItem = ({ p, onCancel, total,onRemove }) => {
     const handleCancel = () => {
         onCancel ();
     }
 
     return (
     <div className="CartItem">
-        <h4>{name}</h4>
-        <p>Cantidad: {quantity}</p>
-        <p>Precio por unidad: ${price}</p>
+        <h4>{p.name}</h4>
+        <img src={p.img}></img>
+        <p>Cantidad: {p.quantity}</p>
+        <p>Precio por unidad: ${p.price}</p>
         <p>Subtotal: ${total}</p>
         <button onClick={handleCancel}>Cancelar</button>
-        <button onClick={onRemove}>Eliminar uno</button>
     </div>
     );
 };
 
-export default CartItem;
+export default CartItem;
 
